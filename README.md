@@ -180,20 +180,26 @@ PageConfig
 
 ## Architecture Decisions
 
-**Discriminated union for elements**..
+**Discriminated union for elements**
+
 `ElementConfig` is a union where `type` is the discriminant. TypeScript automatically narrows the `data` shape to the correct type in every switch/case. Adding a new element type is a compile-time-safe operation.
 
-**Next.js & TypeScript for the whole project**..
+**Next.js & TypeScript for the whole project**
+
 As this would be a client facing website the loading times are important. Next.js with app router and server side rendering/incremental static regeneration is a good choice for this project. TypeScript for type safety and better developer experience and less runtime errors.
 
-**Fractional indexing for order**..
+**Fractional indexing for order**
+
 Elements are ordered by a string `order` field, not array position. Reordering inserts a new string lexicographically between two existing ones (e.g. between `'c'` and `'f'` → `'d'`). This means a drag-and-drop operation only mutates the moved element — the rest of the array is untouched.
 
-**`visible` vs deletion**..
+**`visible` vs deletion**
+
 Hidden elements remain in state with `visible: false`. The public page filters them out; the editor shows a placeholder. This preserves the config and no data is lost
 
-**Two-route separation**..
+**Two-route separation**
+
 `/` is the public-facing page. `/edit` is the editor. The editor holds all mutable state. The public page reads from `localStorage` on mount, falling back to the seed config.
 
-**Factory pattern for defaults**..
+**Factory pattern for defaults**
+
 `createDefaultElement(type)` in `utils.ts` is the single source of truth for what a newly added element looks like. Its like a factory function that returns a new element config object with the given type and default values.
