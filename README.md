@@ -47,6 +47,7 @@ Social Links - Displays social media links with customisable icons or buttons.
 
 ## Project Structure
 
+```txt
 airlink/
 ├── app/
 │ ├── edit/
@@ -85,6 +86,7 @@ airlink/
 ├── postcss.config.js
 ├── tsconfig.json
 └── package.json
+```
 
 ## Data Structure
 
@@ -95,6 +97,7 @@ which contains theme settings for the entire page.
 Each element in the elements array has a unique id, a type (which is one of the 6 types of elements), a visible property (which is a boolean),
 and an order property (which is a string).
 
+```txt
 Banner Element Data Object:
 ├── title
 ├── subtitle
@@ -106,7 +109,8 @@ text: string,
 ctaBackground: string,
 ctaText: string
 }
-
+```
+```txt
 Carousel Element Data Object:
 ├── items: CarouselItem[] # also has its own `order`
 └── settings: {
@@ -119,7 +123,8 @@ CarouselItem Data Object:
 ├── title: string
 ├── caption: string
 └── imageUrl: string
-
+```
+```txt
 CardGrid Element Data Object:
 ├── cards: Card[] # also has its own `order`
 └── columns: 2 | 3
@@ -171,6 +176,7 @@ PageConfig
 ├── { id, type, visible, order, data: ButtonLinkData }
 └── { id, type, visible, order, data: CarouselData }
 └── items: CarouselItem[] ← also has its own `order`
+```
 
 ## Architecture Decisions
 
