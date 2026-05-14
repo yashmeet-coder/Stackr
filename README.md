@@ -186,7 +186,7 @@ PageConfig
 
 **Next.js & TypeScript for the whole project**
 
-As this would be a client facing website the loading times are important. Next.js with app router and server side rendering/incremental static regeneration is a good choice for this project. TypeScript for type safety and better developer experience and less runtime errors.
+As this would be a client facing website the loading times are important. Next.js with app router and server side rendering/incremental static regeneration is a good choice for this project. TypeScript for type safety and better developer experience and less runtime errors. Though currently this is using CSR as it reads data from localStorage as no backend is involved.
 
 **Fractional indexing for order**
 
