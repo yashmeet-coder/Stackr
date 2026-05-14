@@ -1,10 +1,10 @@
-# AirLink
+# AllMyLinks
 
 A completely customisable asset listing website
 
 ## Overview
 
-AirLink is a drag-and-drop page builder for businesses. It lets you compose a public-facing landing page from predefined elements — banners, carousels, card grids, buttons, and more. Changes made in the visual editor are reflected instantly on the public page.
+AllMyLinks is a drag-and-drop page builder for businesses. It lets you compose a public-facing landing page from predefined elements — banners, carousels, card grids, buttons, and more. Changes made in the visual editor are reflected instantly on the public page.
 
 ## Features
 
